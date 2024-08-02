@@ -1,12 +1,14 @@
 import React from 'react'
 
-function Alert(props) {
+function Alert({alert}) {
     return (
-             props.alert && (
+        <div style={{height: "50px"}}>
+            { alert && (
                 <div className="alert alert-success alert-dismissible fade show mt-5" role="alert">
-                    <strong> {props.alert.type}</strong>:{props.alert.msg}
+                    <strong> {alert.type}</strong>:{alert.msg}
                 </div>
-             )
+            )}
+                </div>
     )
 }
 
